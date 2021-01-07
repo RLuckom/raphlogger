@@ -1,0 +1,15 @@
+{
+  "name": "rlogger",
+  "version": "0.0.0",
+  "description": "logger for structured logging",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "log",
+    "logger"
+  ],
+  "author": "Raphael Luckom",
+  "license": "AGPL-3.0-or-later"
+}
