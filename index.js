@@ -103,12 +103,39 @@ function init(output, options) {
       component = c
     }
   }
+  log.levels = levels
+  asyncLog.levels = levels
+  const selectedLogger = asyncOutput ? asyncLog : log
+  const error = (args, callback) => {
+    args.level = levels.ERROR
+    selectedLogger(args, callback)
+  }
+  const warn = (args, callback) => {
+    args.level = levels.WARN
+    selectedLogger(args, callback)
+  }
+  const info = (args, callback) => {
+    args.level = levels.INFO
+    selectedLogger(args, callback)
+  }
+  const debug = (args, callback) => {
+    args.level = levels.DEBUG
+    selectedLogger(args, callback)
+  }
+  const trace = (args, callback) => {
+    args.level = levels.TRACE
+    selectedLogger(args, callback)
+  }
   return {
     log: asyncOutput ? asyncLog : log,
+    error,
+    warn,
+    info,
+    debug,
+    trace,
     setSource,
     setSourceInstance,
     setComponent,
-    levels,
   }
 }
 
