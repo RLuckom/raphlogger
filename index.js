@@ -64,7 +64,7 @@ function init(output, options) {
   }
   function assert(valid, name, expected, value) {
     if (!valid) {
-      log({level: levels.ERROR, tags: ["INVALID_LOG"], component: 'logger', metadata: {name, expected} })
+      log({level: levels.ERROR, tags: ["INVALID_LOG"], component: 'logger', metadata: {name, expected, value: String(value)} })
       return undefined
     }
     return value
