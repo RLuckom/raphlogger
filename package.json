@@ -1,6 +1,6 @@
 {
-  "name": "rlogger",
-  "version": "0.0.0",
+  "name": "raphlogger",
+  "version": "0.0.1",
   "description": "logger for structured logging",
   "main": "index.js",
   "scripts": {
