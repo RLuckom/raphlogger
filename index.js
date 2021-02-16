@@ -10,7 +10,7 @@ function init(output, options) {
   if (options) {
     source = options.source
     sourceInstance = options.sourceInstance
-    component = options.sourceInstance
+    component = options.component
     asyncOutput = options.asyncOutput
   }
   output = output || ((...args) => console.log(...args))
